@@ -1,0 +1,40 @@
+    <div>
+        <div class="testInputContainer">
+            <label for={{label}}> {{label}} <span *ngIf="required">*</span> </label>
+            <div class="additionalUni">
+                <div class="testInput">
+                    <input 
+                    type="text" 
+                    id={{label}} 
+                    placeholder={{placeholder}}
+                    (change)="changeHandler($event)"/>
+                    <p *ngIf="firstUniError">Введите правильные данные!</p>
+                    <span *ngIf="description">{{description}}</span>
+                </div>
+                <div
+                *ngIf="type === 'university' && i > 1"
+                >
+                    <div
+                    class="additionalUniEl"
+                    *ngFor="let el of universitiesAmount; index as i; first as isFirst"
+                    >
+                        <div>
+                            <input
+                            id={{i}}
+                            type="text" 
+                            placeholder={{placeholder}}
+                            (change)="changeHandler($event)"/>
+                            <p *ngIf="universitiesAmount[i][1]">Введите правильные данные!</p>
+                        </div>
+                        <div class="delete"
+                        (click)="deleteUni($event, i)">-</div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="type === 'university'" class="addUni" (click)="clickHandler($event)">
+                <div>+</div>
+                <p>Добавить еще</p>
+            </div>
+        </div>
+
+    </div>

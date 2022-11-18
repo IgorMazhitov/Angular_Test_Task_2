@@ -1,0 +1,25 @@
+.test-form {
+    width: 100%;
+    height: 100%;
+    margin: 5rem;
+}
+
+.submitBtn {
+    width: 139px;
+    height: 52px;
+    border-radius: 3px;
+    background: #FFDA42;
+    border: 1px solid lightgray;
+
+    font-family: PT Sans;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: center;
+
+
+    &_disabled {
+        background: rgba(255, 231, 131, 1);
+    }
+}

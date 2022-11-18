@@ -1,0 +1,14 @@
+    <div>
+        <p>{{label}}</p>
+        <div class="checkBoxWrapper" id="boxes{{label}}">
+            <div
+            class="checkBoxElementWrapper"
+            *ngFor="let el of choices; index as i; first as isFirst"
+            >
+                <label for={{el}}> {{el}} </label>
+                <input type="checkbox" id={{el}}
+                (change)="changeHandler($event)"
+            >
+            </div>
+        </div>
+    </div>

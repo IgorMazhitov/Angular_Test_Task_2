@@ -1,0 +1,42 @@
+
+<div class="test-form">
+
+    <h1>Анкета</h1>
+
+    <app-test-input
+    *ngFor="let input of inputField"
+    [element]="input"
+    (newInputText)="newInput($event)"
+    (removeUni)="removeHandler($event)"
+    >
+    ></app-test-input>
+
+    <app-test-number
+    *ngFor="let number of numberField"
+    [element]="number"
+    (newInputNumber)="newInput($event)"
+    >
+    ></app-test-number>
+
+    <app-test-select
+    *ngFor="let select of selectField"
+    [element]="select"
+    (newInputSelect)="newInput($event)"
+    ></app-test-select>
+
+    <app-test-checkbox
+    *ngFor="let checkbox of checkboxField"
+    [element]="checkbox"
+    ></app-test-checkbox>
+
+    <button 
+    id="submitBtn"
+    class="submitBtn"
+    disabled
+    (click)="submitForm($event)"
+    >
+        Отправить
+    </button>
+
+
+</div>

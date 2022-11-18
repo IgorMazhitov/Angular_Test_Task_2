@@ -1,0 +1,7 @@
+    <div class="customWrapper {{label}} customWrapper__hide" id="custom{{label}}">
+            <span
+            *ngFor="let el of choices; index as i; first as isFirst"
+            class="element {{el}}"
+            (click)="selector($event)"
+            > {{el}}</span>
+    </div>

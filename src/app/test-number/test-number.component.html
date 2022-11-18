@@ -1,0 +1,14 @@
+
+    <div id="numberContainer">
+
+        <label for={{label}}> {{label}} <span *ngIf="required">*</span>  </label>
+        <div id="inputNumberContainer">
+            <input type="number" min="0" id={{label}} value={{valueNumber}} (change)="changeHandler($event)">
+            <div id="btn">
+                <div (click)="onClickIncr()" id="incr"><img src="assets/arrowUP.svg"></div>
+                <div (click)="onClickDecr()" id="decr"><img src="assets/arrowDown.svg"></div>
+            </div>
+        </div>
+        <span *ngIf="description">{{description}}</span>
+
+    </div>

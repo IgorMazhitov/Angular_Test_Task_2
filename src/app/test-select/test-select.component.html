@@ -1,0 +1,14 @@
+
+    <div id="selectContainer">
+        <label for={{label}}> <p>{{label}}</p> <span *ngIf="required">*</span> </label>
+        <div class="valueWrapper">
+            <span>{{currentValue}} </span>
+            <img src="assets/arrowShowHide.svg" id="{{label}}img" class="img img_down" (click)="clickHandler($event)">
+            <app-select-custom-drop-down
+            [choices]="choices"
+            [label]="label"
+            (changeCurrentValue)="changeCurrentValue($event)">
+            </app-select-custom-drop-down>
+        </div>
+
+    </div>
